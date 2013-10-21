@@ -88,6 +88,17 @@ namespace KallynGowdy.ArgumentParser
         /// Matches values to arguments in the array. Returns null and prints help info if a required arg was not passed.
         /// Also returns null and prints help info if "-h" or "--help" was specified.
         /// </summary>
+        /// <param name="commandLineArgs">The arguements that was entered into the command line.</param>
+        /// <returns></returns>
+        public Dictionary<IArgument, object> GetValues(string[] commandLineArgs)
+        {
+            return GetValues(string.Join(" ", commandLineArgs));
+        }
+
+        /// <summary>
+        /// Matches values to arguments in the array. Returns null and prints help info if a required arg was not passed.
+        /// Also returns null and prints help info if "-h" or "--help" was specified.
+        /// </summary>
         /// <param name="commandLineStr">The string that was entered into the command line.</param>
         /// <returns></returns>
         public Dictionary<IArgument, object> GetValues(string commandLineStr)
