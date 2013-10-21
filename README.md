@@ -16,7 +16,7 @@ Define the parser
 
 You define a parser using object declaration statements. For example, we can define an argument parser that takes one positional argument like so:
 
-```
+```C#
 using KallynGowdy.ArgumentParser;
 
 public class Program
